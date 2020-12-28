@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD_NEW_USER</title>
+    <style>
+        table th, table td {
+            padding: 5px;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 200%;
+        }
+    </style>
+</head>
+<body>
+<a th:href="@{/logout}">Logout</a>
+<table class="click-table" id="user_table">
+    <tr>
+        <thead>
+        <h1 >Create User</h1>
+        <th>Login</th>
+        <th>Password</th>
+        <th>Action</th>
+        </thead>
+        <tbody>
+        <form th:method="post" th:action="@{/admin}" th:object="${user}">
+            <th><input required type="text" th:field="*{login}" id="login"/></th>
+            <th><input required type="text" th:field="*{password}" id="password"/></th>
+            <th><input type="submit" value="Create"/></th>
+        </form>
+        </tbody>
+    </tr>
+</table>
+<p><a href="/admin/all" id="allUsers">List all users</a></p>
+</body>
+</html>

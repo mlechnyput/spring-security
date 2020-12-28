@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EDIT_USER</title>
+
+</head>
+<body>
+<a th:href="@{/logout}">Logout</a><br/>
+<table>
+
+    <tr>
+
+    <form th:method="post" th:action="@{/admin/{id}(id=${user.getId()})}" th:object="${user}">
+        <td><label for="xx">Id </label></td>
+        <td th:text="*{id}" id="xx"></td>
+
+        <td><label for="login">;  Login :</label></td>
+        <td><input type="text" th:field="*{login}" id="login" required/></td>
+        <td><label for="name">;  Password :</label></td>
+        <td><input type="text" th:field="*{password}" id="name" required/></td>
+        <td><input type="submit" value="Update"/></td>
+    </form>
+    <form th:method="delete" th:action="@{/admin/__*{id}__}" th:object = "${user}">
+        <td><input type="submit" value="Delete"/>
+    </form>
+    </tr>
+</table>
+<p><a href="/admin/all" id="allUsers">List all users</a></p>
+</body>
+</html>
