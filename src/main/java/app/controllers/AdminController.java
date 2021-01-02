@@ -1,6 +1,6 @@
-package webapp.controllers;
-import webapp.models.User;
-import webapp.service.UserService;
+package app.controllers;
+import app.models.User;
+import app.service.UserService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

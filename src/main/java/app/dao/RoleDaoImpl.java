@@ -1,7 +1,7 @@
-package webapp.dao;
+package app.dao;
 
 import org.springframework.stereotype.Repository;
-import webapp.models.Role;
+import app.models.Role;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

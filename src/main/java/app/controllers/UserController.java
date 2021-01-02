@@ -1,7 +1,7 @@
-package webapp.controllers;
+package app.controllers;
 
-import webapp.models.User;
-import webapp.service.UserService;
+import app.models.User;
+import app.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

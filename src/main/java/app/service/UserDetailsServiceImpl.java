@@ -1,4 +1,4 @@
-package webapp.service;
+package app.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -8,9 +8,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import webapp.dao.UserDao;
-import webapp.models.Role;
-import webapp.models.User;
+import app.dao.UserDao;
+import app.models.Role;
+import app.models.User;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,6 +1,6 @@
-package webapp.service;
+package app.service;
 
-import webapp.models.User;
+import app.models.User;
 
 import java.util.List;
 

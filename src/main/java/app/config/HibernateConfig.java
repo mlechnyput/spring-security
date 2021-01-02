@@ -1,4 +1,4 @@
-package webapp.config;
+package app.config;
 
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @PropertySource("classpath:db.properties")
-@ComponentScan(value = "webapp")
+@ComponentScan(value = "app")
 public class HibernateConfig {
 
     @Autowired
@@ -53,7 +53,7 @@ public class HibernateConfig {
         em.setPersistenceUnitName(persistenceUnitName());
         em.setPersistenceProvider(new HibernatePersistenceProvider());
         em.setDataSource(dataSource());
-        em.setPackagesToScan("webapp");
+        em.setPackagesToScan("app");
 
         JpaVendorAdapter vendorAdapter=new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);

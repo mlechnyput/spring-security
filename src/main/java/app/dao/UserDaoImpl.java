@@ -1,7 +1,7 @@
-package webapp.dao;
+package app.dao;
 
 import org.springframework.stereotype.Repository;
-import webapp.models.User;
+import app.models.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
